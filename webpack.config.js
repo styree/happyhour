@@ -1,18 +1,22 @@
-
 var HTMLWebpackPlugin = require('webpack-html-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 
 module.exports = {
 	entry: [
-		path.join(__dirname, '/app/js/init.js'),
-		path.join(__dirname, '/app/css/style.scss')
+		path.join(__dirname, '/app/index.js'),
+		path.join(__dirname, '/app/styles/style.scss')
 	],
 	module: {
 		loaders: [
 			{
 				test: /\.js$/,
 				loader: 'babel-loader'
+			},
+			{
+				exclude: '/node_modules/',
+				loader: 'babel-loader',
+				test: /\.jsx?$/
 			},
 			{
 				test: /\.css$/,
@@ -43,7 +47,7 @@ module.exports = {
 			}
 		]
 	},
-	devServer:{
+	devServer: {
 		contentBase: '/build'
 	},
 	output: {

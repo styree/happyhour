@@ -5,10 +5,17 @@
   "repository": "git@github.com:styree/happyhour.git",
   "author": "Steve Tyree <hello@stevetyree.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.7.2",
