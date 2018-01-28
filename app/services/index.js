@@ -1,4 +1,4 @@
-export default [
+const tempData = [
 	{
 		name: 'some place',
 		address: '123 w pebble lane, seattle, wa 98109',
@@ -24,3 +24,7 @@ export default [
 		specials: 'we got all the other specials'
 	}
 ];
+
+import sheetService from './sheet.service.js';
+
+export default sheetService;
